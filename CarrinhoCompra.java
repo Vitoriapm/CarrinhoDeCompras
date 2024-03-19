@@ -1,7 +1,6 @@
 package CarrinhoDeCompras;
 
 public class CarrinhoCompra {
-	
 	//método exibir produtos
 	public static void exibirProdutos(Produto[]produtos) {
 		System.out.println("----------------------------------------------------------------");
