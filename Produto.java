@@ -1,20 +1,19 @@
 package CarrinhoDeCompras;
 
-public class Produto {
-	
+//classe pública que pode ser acessada por outras classes
+public class Produto { 
 	//declarar variáveis - só podem ser modificadas na própria classe
 	private int codigo;
 	private String descProduto;
 	private double preco;
 	private int quantidade;
 	
-	//classe pública que pode ser acessada por outras classes
 	public Produto(int codigo, String descProduto, double preco, int quantidade) { 
-        this.codigo = codigo;
-        this.descProduto = descProduto;
-        this.preco = preco;
-        this.quantidade = quantidade;
-    }
+        	this.codigo = codigo;
+        	this.descProduto = descProduto;
+        	this.preco = preco;
+        	this.quantidade = quantidade;
+	}
 
     // receber o valor das variáveis privadas e modificá-los
     public int getCodigo() {
@@ -58,7 +57,7 @@ public class Produto {
 		double[] preco = {2.89, 25.0, 5.0, 18.92, 15.32, 4.0, 10.99, 23.90, 21.92, 23.98};
 		int[] quantidade = {2,1,4,1,1,3,1,1,1,2};
 		
-		//criar a lista de produtos
+		//adicionar os elementos na lista
 		for(int i=0; i<10; i++) {
 			produtos[i] = new Produto(codigo[i], descProduto[i], preco[i], quantidade[i]);
 		}
