@@ -14,7 +14,6 @@ public class Main {
 	//método menu
 	public static void menu() {
 		Produto[]produtos = Produto.listarDados(); //recebe a lista de produtos
-    
 		double totalCompra = CarrinhoCompra.fecharCompra(produtos); //recebe o valor total da compra
     
 		System.out.println("----------------------------------------------------------------");	
@@ -23,7 +22,7 @@ public class Main {
 		String opcao1 = sc.nextLine();
 		
 		if(opcao1.equalsIgnoreCase("S")) {
-			if(produtos.length == 10) {
+			if(produtos.length == 10) { //exibe a lista se houver somente 10 produtos
 				CarrinhoCompra.exibirProdutos(produtos); //exibir os produtos
 				
 				//encerrar compra
@@ -37,16 +36,13 @@ public class Main {
 					System.out.println("O valor total dessa compra foi: " + totalCompra);
 					System.out.println("----------------------------------------------------------------");	
 				}else {
-					menu();
-				}
+					menu(); //se não quiser encerrar, o menu é mostrado novamente
+				}	
 			}else {
 				System.out.print("Não existe produtos suficientes!");
-			}
-			
+			}	
 		}else {
-			menu();
+			menu(); //se o usuário não quiser ver os produtos, o menu é mostrado novamente
 		}
-    
 	}
-	
 }
